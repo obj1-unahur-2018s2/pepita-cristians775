@@ -1,0 +1,78 @@
+import Golondrina.*
+import comidas.*
+import roque.*
+import masAves.*
+
+
+test "test Golondrina" {
+	
+	var juliana=new Golondrina()
+	var melina=new Golondrina()
+	var tatiana=new Golondrina()
+	
+	juliana.comer(alpiste,50)
+	melina.comer(mondongo,9)
+	tatiana.comer(sorgo,8)
+	melina.volar(130)
+	tatiana.volar(40)
+	
+	assert.equals(200,juliana.energia())
+	assert.equals(760,melina.energia())
+	assert.equals(22,tatiana.energia())
+	assert.that(!juliana.estaDebil())
+	assert.that(!juliana.estaFeliz())
+	assert.that(melina.estaFeliz())
+	assert.that(tatiana.estaDebil())
+
+	
+
+}
+test "3 golondrinas"{
+	
+	   var juliana=new Golondrina()
+	   var melina=new Golondrina()
+	   var tatiana=new Golondrina()
+	   var pirula=new Paloma()
+	   var pirincha=new Paloma()
+	   
+	   juliana.comer(alpiste,50)
+	   melina.comer(mondongo,9)
+	   tatiana.comer(sorgo,8)
+	   pepon.comer(alpiste,100)
+	   pirula.comer(alpiste,100)
+	   pirincha.volar(20)
+	   
+	   
+	   
+	   roque.agregar(juliana)
+	   roque.agregar(melina)
+	   roque.agregar(pirincha)
+	   roque.agregar(pepon)
+	   roque.entrenar()
+	   
+	   
+	   assert.equals(285,juliana.energia())
+	   assert.equals(967,melina.energia())
+	   assert.equals(72,tatiana.energia())
+	   assert.equals(249,pepon.energia())
+	   assert.equals(100,pirula.gramosIngeridos())
+	   assert.equals(0,pirula.kmsRecorridos())
+	   assert.equals(35,pirincha.kmsRecorridos())
+	   assert.equals(30,pirincha.gramosIngeridos())
+	  
+	  
+	   
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
